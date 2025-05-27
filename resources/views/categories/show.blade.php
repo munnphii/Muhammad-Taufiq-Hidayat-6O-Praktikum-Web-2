@@ -12,7 +12,7 @@
         <div class="card-body">
             <h4>Name Category:</h4>
             <p>{{ $category->name }}</p>
-            <a href="{{ route('categories.index') }}" class="btn btn-secondary">Back</a>
+            <a href="{{ route('categories.index') }}" class="btn btn-secondary">BACK</a>
         </div>
     </div>
 </div>

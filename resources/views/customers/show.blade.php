@@ -9,7 +9,7 @@
             <p><strong>Telepon:</strong> {{ $customer->telp }}</p>
             <p><strong>Email:</strong> {{ $customer->email }}</p>
             <p><strong>Alamat:</strong> {{ $customer->alamat }}</p>
-            <a href="{{ route('customers.index') }}" class="btn btn-secondary">Back</a>
+            <a href="{{ route('customers.index') }}" class="btn btn-secondary">BACK</a>
         </div>
     </div>
 </div>

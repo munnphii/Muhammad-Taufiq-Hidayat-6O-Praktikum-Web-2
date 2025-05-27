@@ -9,8 +9,8 @@
                 @if(isset($unit)) @method('PUT') @endif
                 <div class="mb-3"><label>Name</label><input type="text" name="name" class="form-control" value="{{ old('name', $unit->name ?? '') }}"></div>
                 <div class="mb-3"><label>Deskripsi</label><textarea name="description" class="form-control">{{ old('description', $unit->description ?? '') }}</textarea></div>
-                <button type="submit" class="btn btn-primary">Save</button>
-                <a href="{{ route('units.index') }}" class="btn btn-secondary">Cancel</a>
+                <button type="submit" class="btn btn-primary">SAVE</button>
+                <a href="{{ route('units.index') }}" class="btn btn-secondary">CANCEL</a>
             </form>
         </div>
     </div>

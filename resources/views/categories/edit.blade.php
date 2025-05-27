@@ -8,7 +8,7 @@
             <label>Name Category</label>
             <input type="text" name="name" class="form-control" value="{{ $category->name }}" required>
         </div>
-        <button class="btn btn-primary">Update</button>
+        <button class="btn btn-primary">UPDATE</button>
         <a href="{{ route('categories.index') }}" class="btn btn-secondary">BACK</a>
     </form>
 </div>

@@ -3,7 +3,7 @@
 @section('content')
 <div class="container-fluid px-4">
     <h1 class="mt-4">Unit</h1>
-    <a href="{{ route('units.create') }}" class="btn btn-success mb-3">Add Unit</a>
+    <a href="{{ route('units.create') }}" class="btn btn-success mb-3">ADD UNIT</a>
     <table class="table table-bordered">
         <thead>
             <tr><th>ID</th><th>Name</th><th>Actions</th></tr>
@@ -14,11 +14,11 @@
                 <td>{{ $unit->id }}</td>
                 <td>{{ $unit->name }}</td>
                 <td>
-                    <a href="{{ route('units.show', $unit->id) }}" class="btn btn-dark btn-sm">Show</a>
-                    <a href="{{ route('units.edit', $unit->id) }}" class="btn btn-primary btn-sm">Edit</a>
+                    <a href="{{ route('units.show', $unit->id) }}" class="btn btn-dark btn-sm">SHOW</a>
+                    <a href="{{ route('units.edit', $unit->id) }}" class="btn btn-primary btn-sm">EDIT</a>
                     <form action="{{ route('units.destroy', $unit->id) }}" method="POST" style="display:inline" onsubmit="return confirm('r u sure?')">
                         @csrf @method('DELETE')
-                        <button class="btn btn-danger btn-sm">Delate</button>
+                        <button class="btn btn-danger btn-sm">DELATE</button>
                     </form>
                 </td>
             </tr>

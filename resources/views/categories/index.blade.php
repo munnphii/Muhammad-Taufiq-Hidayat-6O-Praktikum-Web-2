@@ -10,7 +10,7 @@
 
     <div class="card mb-4">
         <div class="card-body">
-            <a href="{{ route('categories.create') }}" class="btn btn-success mb-3">Add Category</a>
+            <a href="{{ route('categories.create') }}" class="btn btn-success mb-3">ADD CATEGORY</a>
             <table class="table table-bordered">
                 <thead>
                     <tr>
@@ -25,11 +25,11 @@
                         <td>{{ $category->id }}</td>
                         <td>{{ $category->name }}</td>
                         <td>
-                            <a href="{{ route('categories.show', $category->id) }}" class="btn btn-sm btn-dark">Show</a>
-                            <a href="{{ route('categories.edit', $category->id) }}" class="btn btn-sm btn-primary">Edit</a>
-                            <form action="{{ route('categories.destroy', $category->id) }}" method="POST" style="display:inline" onsubmit="return confirm('Yakin ingin menghapus?')">
+                            <a href="{{ route('categories.show', $category->id) }}" class="btn btn-sm btn-dark">SHOW</a>
+                            <a href="{{ route('categories.edit', $category->id) }}" class="btn btn-sm btn-primary">EDIT</a>
+                            <form action="{{ route('categories.destroy', $category->id) }}" method="POST" style="display:inline" onsubmit="return confirm(' r u sure?')">
                                 @csrf @method('DELETE')
-                                <button type="submit" class="btn btn-sm btn-danger">Delate</button>
+                                <button type="submit" class="btn btn-sm btn-danger">DELATE</button>
                             </form>
                         </td>
                     </tr>

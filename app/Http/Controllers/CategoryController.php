@@ -6,6 +6,7 @@ use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\View\View;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class CategoryController extends Controller
 {
@@ -61,5 +62,19 @@ class CategoryController extends Controller
         $category->delete();
 
         return redirect()->route('categories.index')->with('success', 'Kategori berhasil dihapus!');
+    }
+    public function printPdf()
+    {
+    $categories = Category::all();
+
+    $data = [
+        'title' => 'Data Kategori',
+        'date' => date('d-m-Y'),
+        'categories' => $categories
+    ];
+
+    $pdf = PDF::loadView('categorypdf', $data)->setPaper('A4', 'portrait');
+
+    return $pdf->stream('Data_Kategori.pdf');
     }
 }

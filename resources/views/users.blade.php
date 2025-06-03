@@ -12,7 +12,10 @@
 
     <div class="card mb-4">
         <div class="card-header">
-            <!-- Optional header content -->
+            <div class="float-end">
+                <a href="{{ route('printuser') }}" class="btn btn-md btn-warning mb-3">PRINT USER</a>
+                <a href="{{ route('exportuser') }}" class="btn btn-md btn-danger mb-3">EXPORT USER</a>
+            </div>
         </div>
         <div class="card-body">
             <div class="row">

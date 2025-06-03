@@ -11,6 +11,9 @@
     <div class="card mb-4">
         <div class="card-body">
             <a href="{{ route('categories.create') }}" class="btn btn-success mb-3">ADD CATEGORY</a>
+            <div class="float-end">
+                <a href="{{ route('category.printpdf') }}" class="btn btn-danger btn-md me-2">Cetak PDF</a>
+            </div>
             <table class="table table-bordered">
                 <thead>
                     <tr>

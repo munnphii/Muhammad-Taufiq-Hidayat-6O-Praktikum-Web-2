@@ -5,12 +5,10 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Product;
 use Illuminate\Contracts\View\View;
-//import return type redirectResponse
 use Illuminate\Http\RedirectResponse;
-//import Http Request
 use Illuminate\Http\Request;
-//import Facades Storage
 use Illuminate\Support\Facades\Storage;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class ProductController extends Controller
 {
@@ -135,10 +133,10 @@ class ProductController extends Controller
     return redirect()->route('products.index')->with([
         'success' => 'Data Berhasil Diubah!',
     ]);
-}
+    }
 
-public function destroy($id): RedirectResponse
-{
+    public function destroy($id): RedirectResponse
+    {
     // Ambil produk berdasarkan ID
     $product = Product::findOrFail($id);
 
@@ -152,7 +150,22 @@ public function destroy($id): RedirectResponse
     return redirect()->route('products.index')->with([
         'success' => 'Data Berhasil Dihapus!',
     ]);
-}
+
+    }
+    public function printPdf()
+    {
+    $products = Product::all();
+
+    $data = [
+        'title' => 'Data Produk',
+        'date' => date('d-m-Y'),
+        'products' => $products
+    ];
+
+    $pdf = PDF::loadView('productpdf', $data)->setPaper('A4', 'landscape');
+
+    return $pdf->stream('Data_Produk.pdf');
+    }
 
 
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Cetak PDF Produk</title>
+    <title>Print PDF Produk</title>
     <style>
         table { width: 100%; border-collapse: collapse; }
         td, th { border: 1px solid #000; padding: 8px; }
@@ -9,7 +9,7 @@
 </head>
 <body>
     <h2>{{ $title }}</h2>
-    <p>Tanggal Cetak: {{ $date }}</p>
+    <p>Tanggal Print: {{ $date }}</p>
 
     <table>
         <thead>

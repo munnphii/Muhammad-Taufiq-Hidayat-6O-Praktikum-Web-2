@@ -12,7 +12,7 @@
         <div class="card-body">
             <a href="{{ route('products.create') }}" class="btn btn-md btn-success mb-3">ADD PRODUCT</a>
             <div class="float-end">
-                <a href="{{ route('products.printpdf') }}" class="btn btn-danger btn-md me-2">Cetak PDF</a>
+                <a href="{{ route('products.printpdf') }}" class="btn btn-danger btn-md me-2">Print PDF</a>
             </div>
                 
 
